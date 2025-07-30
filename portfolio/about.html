@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>About Me – Eshan Manisha</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body.dark {
+      background-color: #111;
+      color: #eee;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .about-container {
+      max-width: 900px;
+      margin: 100px auto;
+      padding: 0 20px;
+      text-align: center;
+    }
+
+    .about-title {
+      font-size: 2.6rem;
+      color:#eee;
+      margin-bottom: 20px;
+    }
+
+    .dynamic-text {
+      font-size: 1.4rem;
+      font-weight: bold;
+      color: #7b61ff;
+      margin: 10px 0 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 40px;
+      font-family: monospace;
+    }
+
+    #glitch-text {
+      display: inline-block;
+      min-width: 280px;
+      text-align: center;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+
+    .about-text {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      color: #ccc;
+      margin-bottom: 40px;
+    }
+
+    .cv-button {
+      display: inline-block;
+      padding: 12px 24px;
+      background-color: #7b61ff;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+
+    .cv-button:hover {
+      background-color: #684fd8;
+    }
+  </style>
+  <nav class="navbar">
+    <div class="logo">E<span>Net</span></div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="skills.html">Skills</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</head>
+<body class="dark">
+  <div class="about-container">
+    <h1 class="about-title">👋 Hi, I'm Eshan Manisha</h1>
+
+    <!-- Hacker-style Reveal Text -->
+    <div class="dynamic-text">
+       <span id="glitch-text">Cybersecurity Enthusiast 🔐</span>
+    </div>
+
+    <p class="about-text">
+      I’m an undergraduate student at the University of Kelaniya, Sri Lanka, studying Information and Telecommunication Technology (Hons), specializing in Computer Networking.<br><br>
+      I enjoy building real-world labs 🧪, working with firewalls 🔥, VPNs 🌐, cloud servers ☁️, and doing ethical hacking with Kali Linux 🐉.<br><br>
+      Every day I learn something new, practice, break things, fix them again — and share what I build. 💪🚀<br><br>
+      I believe learning by doing is the best path toward becoming a skilled cybersecurity and cloud engineer.
+    </p>
+
+    <a class="cv-button" href="assets/eshan_cv.pdf"  target="_blank" download>📄 Download My CV</a>
+  </div>
+
+  <script>
+    const roles = [
+      "I am a Cybersecurity Enthusiast 🔐",
+      "I am a Cloud Engineer ☁️",
+      "I am a Lab Builder 🧪",
+      "I am a Network Hacker ⚡",
+      "I am a Lifelong Learner 📚",
+      
+    ];
+
+    const glitchSpan = document.getElementById("glitch-text");
+    const glitchChars = "!@#$%^&*()_+=-[]{}|;:,.<>/?~▓▒░█";
+
+    let currentIndex = 0;
+
+    function revealTextEffect(targetText, callback) {
+      let displayText = '';
+      let progress = 0;
+
+      const interval = setInterval(() => {
+        displayText = '';
+
+        for (let i = 0; i < targetText.length; i++) {
+          if (i < progress) {
+            displayText += targetText[i];
+          } else {
+            displayText += glitchChars[Math.floor(Math.random() * glitchChars.length)];
+          }
+        }
+
+        glitchSpan.textContent = displayText;
+
+        if (progress >= targetText.length) {
+          clearInterval(interval);
+          glitchSpan.textContent = targetText;
+          if (callback) callback();
+        }
+
+        progress++;
+      }, 50);
+    }
+
+    function changeRole() {
+      const role = roles[currentIndex];
+      revealTextEffect(role);
+      currentIndex = (currentIndex + 1) % roles.length;
+    }
+
+    setInterval(changeRole, 3000);
+    revealTextEffect(roles[currentIndex]); // initial run
+    currentIndex++;
+  </script>
+</body>
+</html>

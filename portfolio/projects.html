@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style1.css" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="script1.js" defer></script>
+  <nav class="navbar">
+    <div class="logo">E<span>Net</span></div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="skills.html">Skills</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</head>
+<body>
+  <header class="projects-header">
+    <h1>Projects</h1>
+    <p>Explore my recent work in networking, cybersecurity, IoT, and cloud infrastructure.</p>
+  </header>
+
+  <div class="projects-container">
+    <!-- Project 1 -->
+    <div class="project-card"
+      data-title="DevOps-Ready Cloud Lab with Dockerized NGINX, SSL, and Portfolio Site"
+      data-description="Provisioned an Ubuntu VM on Oracle Cloud, configured SSH access, installed Docker and Portainer, deployed a personal portfolio with Nginx, and secured the site with SSL via Certbot."
+      data-tech="Ubuntu 22.04, Docker, Nginx, Certbot, Oracle Cloud, Portainer"
+      data-role="Cloud Engineer"
+      data-image="assets/images/cloud-lab.png"
+      data-download="assets/downloads/cloud-lab.pdf">
+      <img src="assets/images/cloud-lab.png" alt="Cloud-Based Home Lab" style="width:100%; max-width:600px; height:auto; border-radius:12px; display:block; margin:0 auto;">
+      <h3>Cloud DevOps: NGINX & SSL Portfolio Site</h3>
+    </div>
+
+    <!-- Project 2 -->
+    <div class="project-card"
+      data-title="Enterprise-Grade Virtual Lab with ESXi, VyOS & Palo Alto Firewall"
+      data-description="Created a virtual lab using VMware ESXi, VyOS, and Palo Alto firewall for network simulations and security testing."
+      data-tech="ESXi, VyOS, Palo Alto, VLANs"
+      data-role="Network Engineer"
+      data-image="assets/images/virtual-lab.png"
+      data-download="assets/downloads/virtual-lab.pdf">
+      <img src="assets/images/virtual-lab.png" alt="Virtual Network Lab" style="width:100%; max-width:600px; height:auto; border-radius:12px; display:block; margin:0 auto;">
+      <h3>Secure Virtual Lab: ESXi + VyOS + Palo Alto</h3>
+    </div>
+
+    <!-- Project 3 -->
+    <div class="project-card"
+      data-title=" Real-World Cisco Networking Lab with Routing, VLANs & Security"
+      data-description="Built a home lab with 2 Catalyst switches and 1 Cisco router to practice CCNA-level switching and routing protocols."
+      data-tech="Cisco Catalyst, Static Routing, VLAN, STP"
+      data-role="Network Technician"
+      data-image="assets/images/cisco-lab.png"
+      data-download="assets/downloads/cisco-lab.pdf">
+      <img src="assets/images/cisco-lab.png" alt="Cisco Physical Lab" style="width:100%; max-width:600px; height:auto; border-radius:12px; display:block; margin:0 auto;">
+      <h3>Hands-On Cisco Networking Lab</h3>
+    </div>
+
+    <!-- Project 4 -->
+    <div class="project-card"
+     data-title="Enterprise-Grade Network Automation Dashboard"
+     data-description="Built a Flask-based web dashboard to manage Cisco devices using Ansible. Supported real-time task execution like 'show config', hostname change, and VLAN creation from a user-friendly interface."
+     data-tech="Ansible, Flask, Python, HTML, CSS, Cisco IOS"
+     data-role="Network Automation Engineer"
+     data-image="assets/images/network-automation-dashboard.png"
+     data-download="assets/downloads/network-automation-dashboard.pdf"> 
+     <img src="assets/images/network-automation-dashboard.png" alt="Network Automation Dashboard" style="width:100%; max-width:600px; height:auto; border-radius:12px; display:block; margin:0 auto;">
+     <h3>Enterprise-Grade Network Automation Dashboard</h3>
+</div>
+
+    <!-- Project 5 -->
+    <div class="project-card"
+      data-title="IoT Smart Pet House with Remote Monitoring via Flutter & Firebase"
+      data-description="Developed an IoT Pet House using ESP32, temperature and motion sensors, Firebase, and real-time monitoring."
+      data-tech="ESP32, Sensors, Firebase, IoT"
+      data-role="IoT Developer"
+      data-image="assets/images/iot-pet.png"
+      data-download="assets/downloads/iot-pet.pdf">
+      <img src="assets/images/iot-pet.png" alt="Smart IoT Pet House" style="width:100%; max-width:600px; height:auto; border-radius:12px; display:block; margin:0 auto;">
+      <h3>Connected Pet House with IoT, Flutter & Firebase</h3>
+    </div>
+
+    <!-- Project 6 -->
+    <div class="project-card"
+      data-title=" ELK Stack for Log and Network Monitorin"
+      data-description="Deployed ElasticSearch, Logstash, Kibana (ELK) with Filebeat and Packetbeat to monitor logs and network traffic on Ubuntu."
+      data-tech="ELK Stack, Filebeat, Packetbeat, Ubuntu"
+      data-role="DevOps Engineer"
+      data-image="assets/images/elk-monitoring.png"
+      data-download="assets/downloads/elk-monitoring.pdf">
+      <img src="assets/images/elk-monitoring.png" alt="ELK Stack Monitoring" style="width:100%; max-width:600px; height:auto; border-radius:12px; display:block; margin:0 auto;">
+      <h3>ELK Stack Monitoring</h3>
+    </div>
+
+    <!-- Project 7 -->
+    <div class="project-card"
+      data-title=" TZFS-Based TrueNAS Storage Server for File Sharing & Backups"
+      data-description="Installed and configured TrueNAS on a dedicated system for ZFS-based storage and secure network file sharing."
+      data-tech="TrueNAS, ZFS, SMB/NFS, Storage"
+      data-role="System Administrator"
+      data-image="assets/images/truenas.png"
+      data-download="assets/downloads/truenas.pdf">
+      <img src="assets/images/truenas.png" alt="TrueNAS Storage" style="width:100%; max-width:600px; height:auto; border-radius:12px; display:block; margin:0 auto;">
+      <h3>TrueNAS Storage Setup</h3>
+    </div>
+
+    <!-- Project 8 -->
+    <div class="project-card"
+      data-title="Ethical Hacking Lab: EternalBlue Exploitation & Post Exploitation Techniques"
+      data-description="Exploited Windows 7 using SMBv1 EternalBlue vulnerability from Kali Linux, created persistence, and dumped password hashes."
+      data-tech="Metasploit, Kali Linux, SMBv1, Exploitation"
+      data-role="Ethical Hacker"
+      data-image="assets/images/eternalblue.png"
+      data-download="assets/downloads/smb-hack.pdf">
+      <img src="assets/images/eternalblue.png" alt="SMB Exploitation" style="width:100%; max-width:600px; height:auto; border-radius:12px; display:block; margin:0 auto;">
+      <h3>Windows SMB Exploitation</h3>
+    </div>
+
+    <!-- Project 9 -->
+    <div class="project-card"
+      data-title="Cloud-Based WireGuard VPN Deployment on Azure for Encrypted Access"
+      data-description="Configured a WireGuard VPN on Azure-hosted Ubuntu VM and connected Windows client for secure network access."
+      data-tech="WireGuard, Azure, Ubuntu, VPN"
+      data-role="Cloud Security Engineer"
+      data-image="assets/images/wireguard-azure.png"
+      data-download="assets/downloads/wireguard-azure.pdf">
+      <img src="assets/images/wireguard-azure.png" alt="WireGuard VPN" style="width:100%; max-width:600px; height:auto; border-radius:12px; display:block; margin:0 auto;">
+      <h3>Azure WireGuard VPN</h3>
+    </div>
+    
+     
+
+<div class="project-card"
+      data-title="Secure VPN Tunnel for Remote ESXi Access Using SSH & Tailscale"
+      data-description="Configured Tailscale VPN on Alpine Linux to remotely access ESXi securely using SSH tunnel and port forwarding."
+      data-tech="Tailscale, Alpine Linux, SSH Tunnel"
+      data-role="Security Engineer"
+      data-image="assets/images/tailscale-vpn.png"
+      data-download="assets/downloads/tailscale-vpn.pdf">
+      <img src="assets/images/tailscale-vpn.png" alt="Tailscale VPN Project" style="width:100%; max-width:600px; height:auto; border-radius:12px; display:block; margin:0 auto;">
+      <h3> VPN Tunnel to ESXi: SSH + Tailscale</h3>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+  <!-- Modal -->
+  <div class="modal" id="projectModal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <div class="modal-body">
+        <img id="modal-image" src="" alt="Project Image">
+        <h2 id="modal-title"></h2>
+        <p><strong>Technologies:</strong> <span id="modal-tech"></span></p>
+        <p><strong>Job Role:</strong> <span id="modal-role"></span></p>
+        <p id="modal-description"></p>
+        <p><a id="modal-download" href="#" target="_blank" download>Download More Details</a></p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

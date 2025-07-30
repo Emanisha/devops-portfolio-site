@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Skills</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body.liquid-dark {
+      background-color: #111;
+      color: #eee;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+    }
+
+    .typing-container {
+      text-align: center;
+      margin-top: 60px;
+      font-size: 2.8rem;
+      color: #eee;
+      font-family: monospace;
+      height: 60px;
+      overflow: hidden;
+      white-space: nowrap;
+      border-right: 2px solid  #eee;;
+      width: fit-content;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .typing-text {
+      display: inline-block;
+      animation: blinkCursor 0.8s steps(1) infinite;
+    }
+
+    @keyframes blinkCursor {
+      50% {
+        border-color: transparent;
+      }
+    }
+
+    .liquid-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 30px;
+      padding: 40px;
+      max-width: 1000px;
+      margin: 40px auto;
+    }
+
+    .liquid-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: #1c1c1c;
+      border-radius: 12px;
+      padding: 20px;
+      
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      animation: zoomInCard 0.8s ease forwards;
+      opacity: 0;
+    }
+
+    .liquid-card:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 20px #7b61ff;
+    }
+
+    .liquid-icon {
+      width: 60px;
+      height: 60px;
+      margin-bottom: 10px;
+    }
+
+    .liquid-label {
+      font-size: 0.95rem;
+      color:#7b61ff;
+      text-align: center;
+    }
+
+    @keyframes zoomInCard {
+      from {
+        transform: scale(0.8);
+        opacity: 0;
+      }
+      to {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+  </style>
+  <nav class="navbar">
+    <div class="logo">E<span>Net</span></div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="skills.html">Skills</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</head>
+<body class="liquid-dark">
+
+  <!-- Typing Header -->
+  <div class="typing-container">
+    <span id="typed-text" class="typing-text"></span>
+  </div>
+
+  <!-- Skills Grid -->
+  <div class="liquid-grid" id="skills-container">
+    <!-- Top Skills -->
+    <div class="liquid-card"><img src="assets/images/paloalto.jpeg" alt="Palo Alto" class="liquid-icon"><span class="liquid-label">Palo Alto</span></div>
+    <div class="liquid-card"><img src="assets/images/fortinet.png" alt="Fortinet" class="liquid-icon"><span class="liquid-label">Fortinet</span></div>
+    <div class="liquid-card"><img src="assets/images/cisco.png" alt="Cisco IOS" class="liquid-icon"><span class="liquid-label">Cisco IOS</span></div>
+    <div class="liquid-card"><img src="assets/images/vyos.png" alt="VyOS" class="liquid-icon"><span class="liquid-label">VyOS Router</span></div>
+    <div class="liquid-card"><img src="assets/images/wireguard.png" alt="WireGuard" class="liquid-icon"><span class="liquid-label">WireGuard VPN</span></div>
+    <div class="liquid-card"><img src="assets/images/tailscale.png" alt="Tailscale" class="liquid-icon"><span class="liquid-label">Tailscale VPN</span></div>
+
+    <!-- Cloud & Virtualization -->
+    <div class="liquid-card"><img src="assets/images/esxi.png" alt="VMware ESXi" class="liquid-icon"><span class="liquid-label">VMware ESXi</span></div>
+    <div class="liquid-card"><img src="assets/images/proxmox.png" alt="proxmox" class="liquid-icon"><span class="liquid-label">Proxmox</span></div>
+    <div class="liquid-card"><img src="assets/images/oracle.png" alt="Oracle Cloud" class="liquid-icon"><span class="liquid-label">Oracle Cloud</span></div>
+    <div class="liquid-card"><img src="assets/images/azure.png" alt="Azure" class="liquid-icon"><span class="liquid-label">Azure Cloud</span></div>
+
+    <!-- Containers & DevOps -->
+    <div class="liquid-card"><img src="assets/images/docker.png" alt="Docker" class="liquid-icon"><span class="liquid-label">Docker</span></div>
+    <div class="liquid-card"><img src="assets/images/portainer.png" alt="Portainer" class="liquid-icon"><span class="liquid-label">Portainer</span></div>
+    <div class="liquid-card"><img src="assets/images/k3s.png" alt="K3s" class="liquid-icon"><span class="liquid-label">K3s</span></div>
+
+    <!-- Monitoring -->
+    <div class="liquid-card"><img src="assets/images/elk.png" alt="ELK Stack" class="liquid-icon"><span class="liquid-label">ELK Stack</span></div>
+    <div class="liquid-card"><img src="assets/images/wireshark.png" alt="Wireshark" class="liquid-icon"><span class="liquid-label">Wireshark</span></div>
+
+    <!-- AI -->
+    <div class="liquid-card"><img src="assets/images/ollama.png" alt="Ollama" class="liquid-icon"><span class="liquid-label">Ollama AI</span></div>
+    <div class="liquid-card"><img src="assets/images/python.png" alt="Python AI" class="liquid-icon"><span class="liquid-label">Python</span></div>
+
+    <!-- Programming -->
+    <div class="liquid-card"><img src="assets/images/c.png" alt="C" class="liquid-icon"><span class="liquid-label">C</span></div>
+    <div class="liquid-card"><img src="assets/images/java.png" alt="Java" class="liquid-icon"><span class="liquid-label">Java</span></div>
+    <div class="liquid-card"><img src="assets/images/python.png" alt="Python" class="liquid-icon"><span class="liquid-label">Python</span></div>
+    <div class="liquid-card"><img src="assets/images/php.png" alt="PHP" class="liquid-icon"><span class="liquid-label">PHP</span></div>
+    <div class="liquid-card"><img src="assets/images/mysql.png" alt="MySQL" class="liquid-icon"><span class="liquid-label">MySQL</span></div>
+
+    <!-- Web & App Dev -->
+    <div class="liquid-card"><img src="assets/images/html.png" alt="HTML" class="liquid-icon"><span class="liquid-label">HTML</span></div>
+    <div class="liquid-card"><img src="assets/images/css.png" alt="CSS" class="liquid-icon"><span class="liquid-label">CSS</span></div>
+    <div class="liquid-card"><img src="assets/images/javascript.png" alt="JavaScript" class="liquid-icon"><span class="liquid-label">JavaScript</span></div>
+    <div class="liquid-card"><img src="assets/images/flutter.png" alt="Flutter" class="liquid-icon"><span class="liquid-label">Flutter</span></div>
+    <div class="liquid-card"><img src="assets/images/firebase.png" alt="Firebase" class="liquid-icon"><span class="liquid-label">Firebase</span></div>
+  </div>
+
+  <!-- Script -->
+  <script>
+    const titles = ["Technologies", "Skills", "Languages", "Frameworks", "Tools"];
+    const typedText = document.getElementById("typed-text");
+    let titleIndex = 0;
+    let charIndex = 0;
+    let typing = true;
+
+    function typeEffect() {
+      const currentTitle = titles[titleIndex];
+      if (typing) {
+        typedText.textContent = currentTitle.substring(0, charIndex + 1);
+        charIndex++;
+        if (charIndex === currentTitle.length) {
+          typing = false;
+          setTimeout(typeEffect, 1500);
+          return;
+        }
+      } else {
+        typedText.textContent = currentTitle.substring(0, charIndex - 1);
+        charIndex--;
+        if (charIndex === 0) {
+          typing = true;
+          titleIndex = (titleIndex + 1) % titles.length;
+        }
+      }
+      setTimeout(typeEffect, typing ? 100 : 60);
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      const cards = document.querySelectorAll(".liquid-card");
+      cards.forEach((card, index) => {
+        card.style.animationDelay = `${index * 0.15}s`;
+      });
+      typeEffect();
+    });
+
+    // Shuffle cards every 5 seconds
+   
+    setInterval(shuffleSkills, 5000);
+  </script>
+</body>
+</html>

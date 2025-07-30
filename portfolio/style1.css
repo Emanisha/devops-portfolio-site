@@ -1,0 +1,117 @@
+.projects-header {
+      text-align: center;
+      padding: 60px 20px 20px;
+      animation: fadeDown 1s ease-in-out;
+    }
+body{
+  margin: 0;
+      background-color: #0f0f0f;
+      font-family: 'Segoe UI', sans-serif;
+      color: #fff;
+}
+
+.page-title {
+  text-align: center;
+  padding: 20px;
+}
+
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 40px;
+  color: #7b61ff;
+  
+}
+
+.project-card {
+ background: #1b1b1b;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 0 0 rgba(0,0,0,0);
+  transform: scale(0.97);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeUp 1s ease-in-out;
+  
+}
+
+.project-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 30px #7b61ff66;
+}
+
+.project-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.view-project-btn {
+  margin-top: 10px;
+  padding: 10px 15px;
+  border: none;
+  background-color:  #7b61ff;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modal-content {
+ background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(25px) saturate(180%);
+  -webkit-backdrop-filter: blur(25px) saturate(180%);
+  border: 1px solid rgba(139, 23, 235, 0.3);
+  border-radius: 25px;
+  padding: 30px;
+  width: 90%;
+  max-width: 600px;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  animation: fadeIn 0.3s ease-in-out;
+  color: #fff;
+  max-height: 90vh;      /* Prevent modal from overflowing screen */
+  overflow-y: auto; 
+  margin: auto;
+}
+
+.modal-content img {
+  width: 100%;
+  max-width: 100%;         /* prevents overflow */
+  max-height: 280px;       /* limits height */
+  object-fit: contain;     /* keeps aspect ratio */
+  display: block;
+  margin: 0 auto 15px auto;
+  border-radius: 8px;
+}
+
+
+}
+
+.modal .close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+ @keyframes fadeDown {
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
